@@ -1,29 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="contact-form">
-        <h1>Contact Us</h1>
-        <form action="send_message.php" method="POST">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Send Message</button>
+<div dir="rtl" style="text-align: right;" trbidi="on">
+    <div id="contact-form">
+        <form name="contact-form" action="send_email.php" method="POST">
+            <input class="contact-form-name" id="ContactForm1_contact-form-name" name="name" placeholder="الاسم الكامل" size="30" type="text" required />
+            <input class="contact-form-email" id="ContactForm1_contact-form-email" name="email" placeholder="بريدك الإلكتروني" size="30" type="email" required />
+            <textarea class="contact-form-email-message" cols="25" id="ContactForm1_contact-form-email-message" name="message" placeholder="الرسالة" rows="5" required></textarea>
+            <input id="ContactForm1_contact-form-submit" type="submit" value="إرسال" />
         </form>
     </div>
-</body>
-</html>
+    <style type="text/css">
+        /** تصميم النموذج **/
+        #contact-form {
+            background: #ffffff;
+            padding: 10px;
+        }
+
+        #ContactForm1_contact-form-name,
+        #ContactForm1_contact-form-email,
+        #ContactForm1_contact-form-email-message {
+            margin: 5px auto;
+            border: 1px solid #e3e3e3;
+            transition: all .5s ease-out;
+            width: 100%;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+        }
+
+        #ContactForm1_contact-form-submit {
+            border: 1px solid #e3e3e3;
+            font: unset;
+            text-shadow: 1px 1px 5px #111;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 5px 15px;
+            background-color: #689f38;
+            border-radius: 5px;
+            color: #fff;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        #ContactForm1_contact-form-email:focus,
+        #ContactForm1_contact-form-name:focus,
+        #ContactForm1_contact-form-email-message:focus {
+            outline: none;
+            border-color: rgb(104 159 56);
+            box-shadow: 0 0 5px rgb(104 159 56);
+        }
+    </style>
+</div>
